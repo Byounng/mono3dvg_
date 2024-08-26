@@ -1,10 +1,10 @@
 random_seed: 444
 
 dataset:
-  type: &dataset_type 'Mono3DRefer' #change name
-  root_img_dir: 'E:\data_track\V2X-Seq-SPD\V2X-Seq-SPD'
-  root_dir: 'F:\YY\Ours\Mono3DVG\Mono3DRefer'
-  video_dir: 'C:\Users\BYounng\Downloads\Video\video_a'
+  type: &dataset_type 'Mono3DRefer' #dont change this
+  root_img_dir: 'E:\data_track\V2X-Seq-SPD\V2X-Seq-SPD'    #The V2X SEQ directory contains the infrastructure-side folder.
+  root_dir: 'F:\YY\Ours\Mono3DVG\Mono3DRefer'          #The Mono3DVG\Mono3DRefer path of the script you downloaded contains only the txt file
+  video_dir: 'C:\Users\BYounng\Downloads\Video\video_a'  #This is your video json path. Each json represents a video with 30 frames.  
   train_split: 'train'
   val_split: 'val'
   test_split: 'test'
