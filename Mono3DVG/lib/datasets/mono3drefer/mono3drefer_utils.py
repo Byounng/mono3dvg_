@@ -59,6 +59,7 @@ class Obj(object):
         pts_img = (pts_2d_hom[:, 0:2].T / pts_rect_hom[:, 2]).T  # (N, 2)
         pts_rect_depth = pts_2d_hom[:, 2] - self.P2.T[3, 2]  # depth in rect camera coord
         return pts_img, pts_rect_depth
+    
 ################  Object3D  ##################
 def get_objects_from_label(object_2):
     return Object3d(object_2)

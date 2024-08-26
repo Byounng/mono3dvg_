@@ -24,7 +24,7 @@ from lib.helpers.utils_helper import set_random_seed
 
 
 parser = argparse.ArgumentParser(description='Mono3DVG Transformer for Monocular 3D Visual Grounding')
-parser.add_argument('--config', default='F:\YY\Ours\Mono3DVG\configs\mono3dvg.yaml', help='settings of detection in yaml format')
+parser.add_argument('--config', default='F:\\YY\\mono3dvg_git\\Mono3DVG\\configs\\mono3dvg.yaml', help='settings of detection in yaml format')
 parser.add_argument('-e', '--evaluate_only', action='store_true', default=False, help='evaluation only')
 
 args = parser.parse_args()

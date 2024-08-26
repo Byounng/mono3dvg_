@@ -137,7 +137,8 @@ class Trainer(object):
             inputs = torch.stack(inputs, 1)#torch.Size([1, 3, 384, 1280])
             # target_other = targets[1]
             inputs = inputs.to(self.device)#orch.Size([1, 3, 384, 1280])
-            calibs = calibs.to(self.device)#torch.Size([1, 3, 4]) 
+            calibs = calibs.to(self.device)#torch.Size([1, 3, 4])
+            #  这里放进来的数据分别 inputs [e([1, 30, 3, 1080, 1920])]  captions 是描述   calibs是那个P2矩阵
 
             # captions = targets["text"]#  描述  lack car, standing at a height of about 1.8 m
             # im_name = targets['image_id']    #  图片名字  000000
@@ -154,7 +155,7 @@ class Trainer(object):
                             
                
             img_sizes = targets["other"][0]['img_size']
-            targets = self.prepare_targets(targets, inputs.shape[0])
+            targets = self.prepare_targets(targets, inputs.shape[0])  # NOTE 目前改到这里   这里返回的是30帧的列表   #2024年8月26日14:06:37 改到这
 
             # train one batch
             self.optimizer.zero_grad()
